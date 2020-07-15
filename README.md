@@ -8,3 +8,7 @@ Tools:
 HTML5 + CSS3
 Bootstrap framework v3.3.5
 Google fonts
+
+The following files besides images are unique:
+index.html
+css/style.css
