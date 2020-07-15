@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Grupo Merino</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:100,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/media.css" />
+	<link rel="stylesheet" type="text/css" href="./css/jquery.pagepiling.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.pagepiling.min.js"></script>
+	<script type="text/javascript" src="./js/collapse.js"></script>
+	<script type="text/javascript">
+		var deleteLog = false;
+
+		$(document).ready(function() {
+	    	$('#pagepiling').pagepiling({
+	    		menu: '#menu',
+	    		anchors: ['home', 'quienes', 'nuestro', 'localizacion', 'bases', 'contactanos'],
+			    afterRender: function(){
+			    	$('#pp-nav').addClass('custom');
+			    },
+			    afterLoad: function(anchorLink, index){
+                    var urlpage = window.location.hash;
+			    	if(index>1){
+			    		$('#pp-nav').removeClass('custom');
+                        $('#header-logo').css('float','left');
+                        $('#header-logo').css('height','auto');
+                        $('#header-logo').css('transition','1s ease');
+                        $('#menu').css('top','40%');
+                        //$('#menu li a').css('font-weight','100');
+                        //$('#menu li a').css('padding','0 5px');
+                        //$('#menu li a').css('height','20px');
+                        //$('#menu li a').css('font-size','18px');
+                        $('#menu li a.navbar-brand').css('border-right','0px');
+                        $('#menu li.active a').css('color','#fff');
+                        $('.navbar-default').css('background','#2e368f');
+                        $('.navbar-default').css('border-bottom','20px solid #c8b132');
+                        $('.navbar-default').css('height','130');
+                        $('.navbar-default').css('transition','1s ease');
+                        $('header').css('height','auto');
+                        
+			    	}else{
+			    		$('#pp-nav').addClass('custom');
+                        $('#header-logo').css('float','left');
+                        $('#header-logo').css('height','auto');
+                        $('.navbar-default').css('background','transparent');
+                        $('.navbar-default').css('border-bottom','0px');
+                        $('#menu li.active a').css('color','#fff');
+                        $('.navbar-default').css('transition','1s ease');
+                        //$('.navbar-default').css('height','130');
+                        $('#menu').css('top','40%');
+                        //$('#menu li a').css('font-weight','bold');
+                        //$('#menu li a').css('padding','0 5px');
+                        //$('#menu li a').css('font-size','18px');
+                        $('header').css('height','auto');
+                        
+			    	}
+			    },
+                        onLeave: function(index, nextIndex, direction){
+                            if((index==1)&&(nextIndex==2)){
+                                //$('#home-seal').toggle( "slide" );
+                            }
+                        }
+			});
+	    });
+    </script>
+</head>
+<body>
+    
+    <!-- INICIO DEL HEADER  -->
+    
+    <header class="row">
+       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <a data-menuanchor="home" class="navbar-brand" href="#home">
+                <img id="header-logo" src="./img/logo.png" alt="gmerino"></a>
+         <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+            <ul id="menu" class="nav navbar-nav">
+                <li data-menuanchor="quienes"><a id="menulink" href="#quienes">Quiénes Somos</a></li>
+                <li data-menuanchor="nuestro"><a id="menulink" href="#nuestro">Nuestro Negocio</a></li>
+                <li data-menuanchor="localizacion"><a id="menulink" href="#localizacion">Ubicación</a></li>
+                <li data-menuanchor="bases"><a id="menulink" href="#bases">Inteligencia del Mercado</a></li>
+                <li data-menuanchor="contactanos"><a class="contacto" id="menulink" href="#contactanos">Contáctanos</a></li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+    
+    
+    <!-- INICIO DE LA PÁGINA -->
+
+	<div id="pagepiling">
+        <!-- HOME -->
+	    <div class="section" id="section1">
+	    	<h1>Soluciones. Servicios. Innovación.</h1>
+	    	<img class="down" src="./img/scroll.png" alt="scroll-down">
+	    </div>
+	    
+	    <!-- QUIENES SOMOS -->
+	    <div class="section" id="section2">
+           
+           <div class="q-intro">
+                <h2>Quiénes Somos</h2>
+               <p>Somos traders de commodities agrícolas enfocados en el mercado Latino Americano. Ofrecemos soluciones logísticas y de procura en la región dando a nuestros clientes el mejor producto por el menor coste. También a través de nuestra división de inteligencia de mercado asesoramos en compras de futuros, estrategias de cobertura y modelos de pronóstico necesarios para ser el más competitivo en su mercado.</p>
+<p>En GM Commodities proveemos soluciones a nuestros clientes brindándoles el acceso a productos y servicios relacionados con materias primas como maíz, soja, trigo y subproductos en toda la región. Estamos enfocados en dar una atención de calidad, de manera que cada empleado esté comprometido con desarrollar una relación duradera con el cliente.
+</p>
+           </div>
+           <img class="down" src="./img/scroll.png" alt="scroll-down">
+      </div>
+        
+         <!-- NUESTRO NEGOCIO -->
+	    <div class="section" id="section3">
+               <h1>Nuestro Negocio</h1>
+               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+             <div class="container">
+            <div class="row">
+                <div class="col-sm-4 top">
+                    <h4>Productos</h4>
+                    <p>Harina de Soya, Soya, Maiz, Trigo, Harina de Pescado, Girasol, DDGs, Canola. Origenes: USA, Argentina, Paraguay, Bolivia, Brasil, Peru, y Ecuador</p>
+                </div>
+                <div class="col-sm-4 top">
+                    <h4>Servicios</h4>
+                    <p>Inteligencia de Mercado, Logistica, Almacenamiento.</p>
+                </div>
+                <div class="col-sm-4 top">
+                    <h4>Modelo de Negocio</h4>
+                    <p>Lograr que el productor llegue al procesador al menor costo posible. Saber donde y cuando comprar. Tener conocimiento del proceso productivo de nuestros clientes para ofrecer la mejor solucion en sus procesos de procura.</p>
+                </div>
+            </div>
+        </div>
+        <img class="down" src="./img/scroll.png" alt="scroll-down">
+        </div>
+        
+         <!-- UBICACION -->
+        <div class="section" id="section4">
+           <div class="sidebar-left2">
+            <h3>Ubicación</h3>
+            <p>Nuestra Presencia se extiende en:<br><span style="color: #c8b132; font-weight: bold;">Venezuela<br>Perú<br>Panamá</span><br><br>Con una expansión proyectada a:<br><span style="color: #2e3392; font-weight: bold;">Argentina<br>Bolivia<br>Paraguay</span></p>
+           </div>
+           
+           <div class="map">
+           	 
+           	 <!-- icons -->
+           	 
+           	 <div id="container">
+				<div class="original-box peru">
+					
+					<div class="popup-box popup-box-left">
+						GM Commodities Perú, SAC<br>Av. Belaunde Nro. 147 Int. 901 Lima, San Isidro, Lima. Perú
+					</div>
+	
+				</div>
+				<div class="original-box panama">
+					
+					<div class="popup-box popup-box-left">
+						GM Commodities, S.A.<br>Calle 50, Edificio Plaza Banco General, 20avo piso. Ciudad de Panamá. Panamá
+					</div>
+	
+				</div>
+				<div class="original-box argentina">
+					
+					<div class="popup-box popup-box-left">
+						GM Commodities Argentina, S.A.<br>Provincia de Buenos Aires. Argentina
+					</div>
+	
+				</div>
+				<div class="original-box bolivia">
+					
+					<div class="popup-box popup-box-left">
+						GM Commodities Bolivia S.R.L.<br>Edificio Centro Empresarial Equipetrol 3er. Piso Oficina "A 3" Calle Los Lirios # 1700. Santa Cruz. Bolivia
+					</div>
+	
+				</div>
+				<!-- <div class="original-box chile">
+					
+					<div class="popup-box popup-box-left">
+						Waiting for the Call
+					</div> 
+	
+				</div>-->
+				<!--<div class="original-box ecuador">
+					
+					<div class="popup-box popup-box-left">
+						Waiting for the Call
+					</div> 
+	
+				</div>-->
+				<div class="original-box paraguay">
+					
+					<div class="popup-box popup-box-left">
+						GM Commodities Paraguay SA<br>La Asunción. Paraguay
+					</div>
+	
+				</div>
+				<div class="original-box venezuela">
+					
+					<div class="popup-box popup-box-left">
+						Waiting for the Call
+					</div>
+	
+				</div>
+			</div><!-- #container -->
+           	 
+           	 <!-- end icons -->
+           	 
+           	<img src="img/world.svg" />
+          	
+           </div>
+           
+           <img class="down" src="./img/scroll.png" alt="scroll-down">
+      </div>
+      
+        <!-- INTELIGENCIA DEL MERCADO -->
+        <div class="section" id="section5">
+           <div class="sidebar-left2">
+            <h3>Inteligencia Del Mercado</h3>
+            <p>Nuestro objetivo es facilitar información precisa sobre la tendencia actual del mercado agrícola, permitiendo al cliente tomar mejores decisiones en su actividad comercial.</p>
+            <div class="reportes">
+                <div class="menu-wrap">
+    <nav class="menu">
+        <ul class="clearfix">
+            <li>
+                <a href="#">Reportes <span class="arrow">&#9660;</span></a>
+ 
+                <ul class="sub-menu">
+                    <li><a href="#">Maíz</a></li>
+                    <li><a href="#">Harina De Soya</a></li>
+                    <li><a href="#">Aceite de Soya</a></li>
+                    <li><a href="#">Trigo</a></li>
+                    <li><a href="#">Flete</a></li>
+                    <li><a href="#">Puerto Cabello</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+               </div> 
+           </div>
+           <div class="local-intro">
+                <h2>Precios Granos</h2>
+                <div style="width: 320px; height: 320px;">
+                <embed src="reportes/Bolipuertos20-11.pdf" type="application/pdf" style="overflow-x: hidden !important;" width="100%" height="100%"></embed>
+                <div class="report"><a target="_blank" href="reportes/Bolipuertos20-11.pdf">Bolipuertos 20-11</a></div>
+                </div>
+                
+           </div>
+           <img class="down" src="./img/scroll.png" alt="scroll-down">
+      </div>
+      
+      <!-- CONTACTO -->
+	    <div class="section" id="section6">
+	    	<h4>Contáctanos</h4>
+	    	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+	      <div class="form-wrap">
+	          <span>Todos los campos son requeridos*</span>
+	    	<form>
+              <div class="form-group">
+                <label for="input-nombre">Nombre</label>
+                <input type="text" class="form-control" id="input-nombre">
+              </div>
+              <div class="form-group">
+                <label for="input-email">Email address</label>
+                <input type="email" class="form-control" id="input-email">
+              </div>
+              <div class="form-group">
+                <label for="input-phone">Teléfono</label>
+                <input type="text" class="form-control" id="input-phone">
+              </div>
+              <div class="form-group">
+                <label for="input-mes">Mensaje</label>
+                <textarea class="form-control" rows="3" id="input-mes"></textarea>
+              </div>
+              <button type="submit" class="btn btn-default">Enviar</button>
+            </form>
+           </div>
+	    </div>
+	</div>
+    
+<!-- JAVASCRIPTS  -->    
+<script type="text/javascript">
+$(document).ready(function() {
+   if (window.innerWidth) {
+      viewportheight = window.innerHeight;
+   }
+   else if (document.documentElement && document.documentElement.clientWidth) {
+      viewportheight = document.documentElement.clientHeight;
+   }
+   else if (document.body) {
+      viewportheight = document.body.clientHeight;
+   }
+    
+  if (screen.width <= 1024) {
+      
+    window.location = "http://dlblabs.com/cbrito/gmcom/";
+      
+  }
+    
+        $('.content').css('height', ((viewportheight - 132) - (viewportheight*0.02)));
+        //$('#section10 .content').css('height', ((viewportheight - 192) - (viewportheight*0.02)));
+        $('.content').css('top', 131);
+        $('.left img').css('height', viewportheight - 20);
+        $('.top-half, .bottom-half').css('height', (viewportheight - 131) / 2);
+    
+        coconutppl = $('#section4 .left').css('width');
+        $('#section4 .right').css('margin-left', coconutppl);
+    
+    function getUrlParameter(sParam)
+    {
+        var sPageURL = window.location.hash;
+        var sURLVariables = sPageURL.split('?');
+        
+            var sParameterName = sURLVariables[1].split('=');
+            if (sParameterName[0] == sParam) 
+            {
+                return sParameterName[1];
+            }else{
+                return 0;
+            }
+        
+    }   
+    var mail = getUrlParameter('mail');
+    if(mail==1){
+        $('.mail-overlay').css('display', 'table');
+    }
+    
+       $('.mail-overlay').click(function () {
+            $('.mail-overlay').css('display', 'none');
+       });
+    
+});
+    
+$(window).load(function() {
+       $('#pagepiling').css('opacity', 1);
+});
+  
+</script> 
+
+</body>
+</html>
